@@ -1,32 +1,56 @@
-const hoje = new Date();
-const diaAtual = hoje.getUTCDate();
-const mesAtual = hoje.getMonth(); 
+// Agilidade dos pilotos (%)
+const slider = 75;
+const jester = 89;
+const stinger = 76;
+const goose = 75;
+const iceman = 98;
+const maverick = 90;
 
-// Continue daqui
+let input = prompt('Escolha um nome de um piloto, dentre as opções: slider, jester, stinger, goose, iceman, maverick');
 
-//entrada de dados
-let diaAniversario = Number(prompt('Digite o numero correspondente ao dia do seu aniversário'));
-let mesAniversario = Number(prompt('Digite o numero correspondente ao mês do seu aniversário'));
-let anoAniversario = Number(prompt('Digite o numero correspondente ao ano do seu próximo aniversário'));
-//validação
-if( diaAniversario > 31 && diaAniversario < 1 && mesAniversario > 12 && mesAniversario < 1 && anoAniversario < 1900 && anoAniversario > 2100){
+const opcoes = ['slider', 'jester', 'stinger', 'goose', 'iceman', 'maverick'];
 
-    console.log("ERRO...DIGITE VALORES VÁLIDOS");
+if(input !== 'slider' && input !=='jester' && input !== 'stinger' && input !== 'goose' && input !== 'iceman' && input !== 'maverick') {
+  console.log('Erro. Por favor, escolha um dos seguintes nomes: slider, jester, stinger, goose, iceman, maverick')
+} else {
+  const numeroAleatorio = Math.floor(Math.random () * opcoes.length)
+  let escolhaComputador = opcoes[numeroAleatorio];
+  let agilidadeUsuario = 0
+  let agilidadePiloto = 0
 
-} else{
+  if (input == 'slider' || input == 'goose') {
+    agilidadeUsuario = 75
+  } else if (input == 'jester') {
+    agilidadeUsuario = 89
+  } else if (input == 'stinger') {
+    input = 76
+  } else if (input == 'iceman') {
+    agilidadeUsuario = 98
+  } else {
+    agilidadeUsuario = 90
+  }
 
-    let dataProximoAniversario = new Date (anoAniversario, (mesAniversario - 1), diaAniversario);
-    //console.log(dataProximoAniversario);
+    if (escolhaComputador == 'slider' || escolhaComputador == 'goose') {
+    agilidadePiloto = 75
+  } else if (escolhaComputador == 'jester') {
+    agilidadePiloto = 89
+  } else if (escolhaComputador == 'stinger') {
+    agilidadePiloto = 76
+  } else if (escolhaComputador == 'iceman') {
+    agilidadePiloto = 98
+  } else {
+    agilidadePiloto = 90
+  }
+
+  console.log(`Você escolheu ${input} com agilidade ${agilidadeUsuario}. O computador escolheu ${escolhaComputador} com agilidade ${agilidadePiloto}.`)
+
+  if(agilidadeUsuario == agilidadePiloto || agilidadeUsuario == 'slider' && agilidadePiloto == 'goose' || agilidadeUsuario == 'goose' && agilidadePiloto == 'slider') {
     
-    let dataEmMilissegundos = Math.floor(dataProximoAniversario.getTime()) - Math.floor(hoje.getTime());
-    //console.log(dataEmMilissegundos);
-    let diasDeDiferenca = Math.floor(dataEmMilissegundos / (1000 * 60 * 60 * 24)) //1000 milisegundos / 60 segundos / 60 minutos / 24 horas
-    //console.log(diasDeDiferenca + 1);
-    diasDeDiferenca++;
-    
-    if(diasDeDiferenca > 0){
-        console.log(`Faltam ${diasDeDiferenca} dias para o seu aniversário`);
-    } else{
-        console.log(`Já se passaram ${-(diasDeDiferenca)} dias desde o seu ultimo aniversário`);
-    }
-}
+    console.log('Deu empate!')
+  } else if (agilidadeUsuario > agilidadePiloto) {
+    console.log('Você venceu!')
+  } else if (agilidadeUsuario < agilidadePiloto) {
+    console.log('Você perdeu!')
+  }
+
+

@@ -4,10 +4,16 @@
 
 # Teste de Performance 3
 
-## Exercício 18
+## Exercício 20
 
-Crie uma aplicação que solicite ao usuário o dia e o mês de seu aniversário.
+No arquivo _script.js_ há variáveis contento a agilidade de vários pilotos.
 
-O programa deve informar para o usuário quantos dias faltam para o seu aniversário ou quantos dias já se passaram.
+Complementando o código do arquivo citado, faça um programa que solicite do usuário, o nome de um piloto.
 
-_O Arquivo script.js já contém as variáveis que pegam o dia e o mês atual, em tempo de execução._
+O programa deve:
+
+- Selecionar aleatoriamente outro piloto.
+- Comparar a agilidade do piloto escolhido pelo usuário e o piloto escolhido aleatoriamente.
+- Exibir no console, o nome dos pilotos comparados.
+- Exibir no console, a agilidade dos pilotos comparados.
+- Exibir no console, se o usuário ganhou, perdeu ou empatou a rodada.
