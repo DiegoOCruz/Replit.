@@ -4,10 +4,8 @@
 
 # Teste de Performance 3
 
-## Exercício 18
+## Exercício 17
 
-Crie uma aplicação que solicite ao usuário o dia e o mês de seu aniversário.
+Crie uma aplicação que solicite ao usuário um ano com 4 dígitos.
 
-O programa deve informar para o usuário quantos dias faltam para o seu aniversário ou quantos dias já se passaram.
-
-_O Arquivo script.js já contém as variáveis que pegam o dia e o mês atual, em tempo de execução._
+A aplicação deve informar para o usuário se aquele ano é bissexto ou não.

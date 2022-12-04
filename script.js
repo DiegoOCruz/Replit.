@@ -1,32 +1,15 @@
-const hoje = new Date();
-const diaAtual = hoje.getUTCDate();
-const mesAtual = hoje.getMonth(); 
-
-// Continue daqui
-
-//entrada de dados
-let diaAniversario = Number(prompt('Digite o numero correspondente ao dia do seu aniversário'));
-let mesAniversario = Number(prompt('Digite o numero correspondente ao mês do seu aniversário'));
-let anoAniversario = Number(prompt('Digite o numero correspondente ao ano do seu próximo aniversário'));
-//validação
-if( diaAniversario > 31 && diaAniversario < 1 && mesAniversario > 12 && mesAniversario < 1 && anoAniversario < 1900 && anoAniversario > 2100){
-
-    console.log("ERRO...DIGITE VALORES VÁLIDOS");
-
-} else{
-
-    let dataProximoAniversario = new Date (anoAniversario, (mesAniversario - 1), diaAniversario);
-    //console.log(dataProximoAniversario);
-    
-    let dataEmMilissegundos = Math.floor(dataProximoAniversario.getTime()) - Math.floor(hoje.getTime());
-    //console.log(dataEmMilissegundos);
-    let diasDeDiferenca = Math.floor(dataEmMilissegundos / (1000 * 60 * 60 * 24)) //1000 milisegundos / 60 segundos / 60 minutos / 24 horas
-    //console.log(diasDeDiferenca + 1);
-    diasDeDiferenca++;
-    
-    if(diasDeDiferenca > 0){
-        console.log(`Faltam ${diasDeDiferenca} dias para o seu aniversário`);
-    } else{
-        console.log(`Já se passaram ${-(diasDeDiferenca)} dias desde o seu ultimo aniversário`);
-    }
+//Digite um ano para saber se ele é bissexto:
+let year = Number(prompt("Digite um ano com 4 dígitos"));
+if (year < 1000 || year > 9999) {
+  console.log('O ano deve ter 4 dígitos. Por favor, tente novamente')
+} else {
+  if(year % 400 == 0){
+    console.log(`${year} é bissexto`);
+  } else if (year % 4 == 0 && year % 100 != 0){
+      console.log(`${year} é bissexto`);
+  }else {
+      console.log(`${year} não é bissexto`);
+  }
 }
+
+// Alterei somente para verificar se o usuário inseriu um ano comm 4 dígitos. Erro se o input for menor que 1000 ou maior que 9999
