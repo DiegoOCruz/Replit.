@@ -1,23 +1,39 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="pt-br">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>replit</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculadora IMC</title>
 </head>
-
 <body>
-  Hello world
-  <script src="script.js"></script>
+    <h2>Calculo IMC</h2>
+    <p>IMC é a sigla para Índice de Massa Corpórea, parâmetro adotado pela Organização Mundial de Saúde para calcular o peso ideal de cada pessoa.</p>
+    <p>O índice é calculado da seguinte maneira: divide-se o peso do paciente pela sua altura elevada ao quadrado. Diz-se que o indivíduo tem peso normal quando o resultado do IMC está entre 18,5 e 24,9.</p>
+    <p>Quer descobrir seu IMC? Insira seu peso e sua altura nos campos abaixo e compare com os índices da tabela. Importante: siga os exemplos e use pontos como separadores.</p><br>
 
- <!--
-  This script places a badge on your repl's full-browser view back to your repl's cover
-  page. Try various colors for the theme: dark, light, red, orange, yellow, lime, green,
-  teal, blue, blurple, magenta, pink!
-  -->
-  <script src="https://replit.com/public/js/replit-badge.js" theme="blue" defer></script> 
+    <div id="divPai">
+        <div class="divFilho">
+            <label>Altura (ex. 1.70)</label><br>
+            <input type="number" name="altura" id="altura">
+        </div>
+        
+        <div class="divFilho">
+            <label>Peso (ex. 69.2)</label><br>
+            <input type="number" name="altura" id="peso">
+        </div>
+
+    </div><br>
+
+    <input type="button" onclick="calcular()" value="calcular"><br>
+
+    <img src="./img/tab_imc_0.png" id="tabelaImc">
+
+    <script src="./script.js"></script>
+
+    <div id="divPaiResultado">
+        Seu IMC: <div id="resultado"></div>
+    </div>
 </body>
-
 </html>

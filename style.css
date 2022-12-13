@@ -1,4 +1,53 @@
-html, body {
-  height: 100%;
-  width: 100%;
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    margin-left: 15px;
+    margin-right: 15px;
+
+}
+
+#divPai{
+    display: flex;
+    
+}
+
+.divFilho{
+    /* border: 3px solid black; */
+    margin-right: 20px;
+}
+
+img{
+    width: 600px;
+    height: 250px;
+    margin-top: 15px;
+}
+
+p{
+    width: 600px;
+    text-align: justify;
+}
+
+#divPaiResultado{
+    /* border: 1px black solid; */
+    width: 200px;
+    height: 80px;
+    border-radius: 25px;
+    margin-top: 15px;
+    padding: 5px;
+    background-color: rgb(255, 77, 0);
+    color: aliceblue;
+    font-weight: bolder;
+    font-size: 25px;
+    font-family: 'Courier New', Courier, monospace;
+    
+}
+
+#resultado{
+    /* border: 1px red solid; */
+    width: 100px;
+    height: 40px;
+    margin-top: 10px;
+    margin-left: 75px;
+
 }

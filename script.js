@@ -1,32 +1,30 @@
-const hoje = new Date();
-const diaAtual = hoje.getUTCDate();
-const mesAtual = hoje.getMonth(); 
+function calcular() {
 
-// Continue daqui
+  let altura = Number(document.getElementById("altura").value);
+  let peso = Number(document.getElementById("peso").value);
+  //console.log(altura, Peso);
+  let imc = peso / (Math.pow(altura, 2)).toFixed(1);
+  //console.log(imc);
 
-//entrada de dados
-let diaAniversario = Number(prompt('Digite o numero correspondente ao dia do seu aniversário'));
-let mesAniversario = Number(prompt('Digite o numero correspondente ao mês do seu aniversário'));
-let anoAniversario = Number(prompt('Digite o numero correspondente ao ano do seu próximo aniversário'));
-//validação
-if( diaAniversario > 31 && diaAniversario < 1 && mesAniversario > 12 && mesAniversario < 1 && anoAniversario < 1900 && anoAniversario > 2100){
+  if (altura != null && altura != undefined || peso != null && peso != undefined) {
 
-    console.log("ERRO...DIGITE VALORES VÁLIDOS");
-
-} else{
-
-    let dataProximoAniversario = new Date (anoAniversario, (mesAniversario - 1), diaAniversario);
-    //console.log(dataProximoAniversario);
-    
-    let dataEmMilissegundos = Math.floor(dataProximoAniversario.getTime()) - Math.floor(hoje.getTime());
-    //console.log(dataEmMilissegundos);
-    let diasDeDiferenca = Math.floor(dataEmMilissegundos / (1000 * 60 * 60 * 24)) //1000 milisegundos / 60 segundos / 60 minutos / 24 horas
-    //console.log(diasDeDiferenca + 1);
-    diasDeDiferenca++;
-    
-    if(diasDeDiferenca > 0){
-        console.log(`Faltam ${diasDeDiferenca} dias para o seu aniversário`);
-    } else{
-        console.log(`Já se passaram ${-(diasDeDiferenca)} dias desde o seu ultimo aniversário`);
+    if (imc <= 18.5) {
+      document.getElementById("tabelaImc").src = "./img/tab_imc_1.png";
+    } else if (imc > 18.5 && imc <= 24.9) {
+      document.getElementById("tabelaImc").src = "./img/tab_imc_2.png";
+    } else if (imc >= 25 && imc <= 29.9) {
+      document.getElementById("tabelaImc").src = "./img/tab_imc_3.png";
+    } else if (imc >= 30 && imc <= 39.9) {
+      document.getElementById("tabelaImc").src = "./img/tab_imc_4.png";
+    } else {
+      document.getElementById("tabelaImc").src = "./img/tab_imc_5.png";
     }
+
+    document.getElementById("resultado").innerHTML = imc.toFixed(1);
+  } else {
+    alert("ERRO... Digite valores validos.")
+  }
+
+
+
 }

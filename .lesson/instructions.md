@@ -2,12 +2,16 @@
     <img src="https://www.infnet.edu.br/infnet/wp-content/themes/infnet.homepage//assets/img/LogoInfnetRodape.png"/>
 </p>
 
-# Teste de Performance 3
+# Questão 3 - Ouro
 
-## Exercício 18
+### Construa uma tela em HTML para a entrada de dados.
 
-Crie uma aplicação que solicite ao usuário o dia e o mês de seu aniversário.
+Construa um programa que solicite do usuário o seu peso e a sua altura e mostre o cálculo do seu Índice de Massa Corpórea - IMC.
 
-O programa deve informar para o usuário quantos dias faltam para o seu aniversário ou quantos dias já se passaram.
+_IMC = peso (kg) / altura² (m)_ 
 
-_O Arquivo script.js já contém as variáveis que pegam o dia e o mês atual, em tempo de execução._
+Utilize como referência o site abaixo para criar uma tela que mostre a classificação do IMC, ou seja, "magreza", "normal", "sobrepeso", "obesidade" ou "obesidade grave".
+
+https://www.programasaudefacil.com.br/calculadora-de-imc
+
+#### Valide todas as entradas de dados.
