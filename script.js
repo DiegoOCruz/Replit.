@@ -1,32 +1,52 @@
-const hoje = new Date();
-const diaAtual = hoje.getUTCDate();
-const mesAtual = hoje.getMonth(); 
+// - Professor, não fiz a valaidação dos dados nesse programa uma vez que não existe entrada de dados por parte do usuário.
 
-// Continue daqui
-
-//entrada de dados
-let diaAniversario = Number(prompt('Digite o numero correspondente ao dia do seu aniversário'));
-let mesAniversario = Number(prompt('Digite o numero correspondente ao mês do seu aniversário'));
-let anoAniversario = Number(prompt('Digite o numero correspondente ao ano do seu próximo aniversário'));
-//validação
-if( diaAniversario > 31 && diaAniversario < 1 && mesAniversario > 12 && mesAniversario < 1 && anoAniversario < 1900 && anoAniversario > 2100){
-
-    console.log("ERRO...DIGITE VALORES VÁLIDOS");
-
-} else{
-
-    let dataProximoAniversario = new Date (anoAniversario, (mesAniversario - 1), diaAniversario);
-    //console.log(dataProximoAniversario);
-    
-    let dataEmMilissegundos = Math.floor(dataProximoAniversario.getTime()) - Math.floor(hoje.getTime());
-    //console.log(dataEmMilissegundos);
-    let diasDeDiferenca = Math.floor(dataEmMilissegundos / (1000 * 60 * 60 * 24)) //1000 milisegundos / 60 segundos / 60 minutos / 24 horas
-    //console.log(diasDeDiferenca + 1);
-    diasDeDiferenca++;
-    
-    if(diasDeDiferenca > 0){
-        console.log(`Faltam ${diasDeDiferenca} dias para o seu aniversário`);
-    } else{
-        console.log(`Já se passaram ${-(diasDeDiferenca)} dias desde o seu ultimo aniversário`);
-    }
+function bissexto (ano){
+  let bissexto = false;
+  if (ano % 400 == 0){
+    bissexto = true
+  } else if ( ano % 4 == 0 && ano % 100 != 0){
+    bissexto = true;
+  } else{
+    bissexto = false;
+  }
+  return bissexto
 }
+
+//ano aleatório com intervalo entre números
+function anoAleatorio (a, b){
+  return Math.floor(Math.random() * ( b - a + 1) + a);
+}
+/*
+console.log(anoAleatorio(1900, 2100));
+console.log(anoAleatorio(1900, 2100));
+console.log(anoAleatorio(1900, 2100));
+console.log(anoAleatorio(1900, 2100));
+*/
+
+let anoA = anoAleatorio(1900, 2100);
+//console.log(anoA);
+let anoB = anoAleatorio(1900, 2100);
+//console.log(anoB);
+let anoC = anoAleatorio(1900, 2100);
+//console.log(anoC);
+let anoD = anoAleatorio(1900, 2100);
+//console.log(anoD);
+let anoE = anoAleatorio(1900, 2100);
+//console.log(anoE);
+
+
+let teste1 = bissexto (anoA) ;
+teste1 ? console.log(`O Ano ${anoA} é bissexto`) : console.log(`O Ano ${anoA} é não bissexto`);
+
+let teste2 = bissexto (anoB) ;
+teste2 ? console.log(`O Ano ${anoB} é bissexto`) : console.log(`O Ano ${anoB} é não bissexto`);
+
+let teste3 = bissexto (anoC) ;
+teste3 ? console.log(`O Ano ${anoC} é bissexto`) : console.log(`O Ano ${anoC} é não bissexto`);
+
+let teste4 = bissexto (anoD) ;
+teste4 ? console.log(`O Ano ${anoD} é bissexto`) : console.log(`O Ano ${anoD} é não bissexto`);
+
+let teste5 = bissexto (anoE) ;
+teste5 ? console.log(`O Ano ${anoE} é bissexto`) : console.log(`O Ano ${anoE} é não bissexto`);
+

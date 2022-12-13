@@ -2,12 +2,12 @@
     <img src="https://www.infnet.edu.br/infnet/wp-content/themes/infnet.homepage//assets/img/LogoInfnetRodape.png"/>
 </p>
 
-# Teste de Performance 3
+# Questão 3 - Prata
 
-## Exercício 18
+### Utilize o arquivo _script.js_ para solucionar essa questão.
 
-Crie uma aplicação que solicite ao usuário o dia e o mês de seu aniversário.
+Crie uma _function_ que, dado um ano, retorne verdadeiro se for bissexto ou falso caso contrário.
 
-O programa deve informar para o usuário quantos dias faltam para o seu aniversário ou quantos dias já se passaram.
+Crie um programa que rode 5 testes com anos diferentes, exibindo o resultado na console.
 
-_O Arquivo script.js já contém as variáveis que pegam o dia e o mês atual, em tempo de execução._
+#### Valide todas as entradas de dados.
