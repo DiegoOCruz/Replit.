@@ -1,23 +1,24 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="pt-br">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>replit</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
 </head>
-
 <body>
-  Hello world
-  <script src="script.js"></script>
+    <h2>Caixa 24H</h2>
+    <div id="borda">
+        <span>Notas disponíveis:</span><br>
+        <span>R$100,00 / R$ 50,00 / R$ 20,00 / R$ 10,00</span><br><br>
+        <span>Valor máximo disponível para saque: <br>R$ 1.000,00</span><br><br>
+        <label>Digite o valor valor do saque:</label><input type="number" name="valorSaque" id="valorSaque"><br>
+        <input type="button" onclick="saque()" value="sacar"><input type="button" onclick="reload()" value="Limpar" id="reload">
+    </div>
 
- <!--
-  This script places a badge on your repl's full-browser view back to your repl's cover
-  page. Try various colors for the theme: dark, light, red, orange, yellow, lime, green,
-  teal, blue, blurple, magenta, pink!
-  -->
-  <script src="https://replit.com/public/js/replit-badge.js" theme="blue" defer></script> 
+    <p id="mensagem"></p>
+    
+    <script src="./script.js"></script>
 </body>
-
 </html>

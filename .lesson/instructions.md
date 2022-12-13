@@ -2,12 +2,12 @@
     <img src="https://www.infnet.edu.br/infnet/wp-content/themes/infnet.homepage//assets/img/LogoInfnetRodape.png"/>
 </p>
 
-# Teste de Performance 3
+# Questão 5 - Ouro
 
-## Exercício 18
+### Construa uma tela em HTML para a entrada de dados.
 
-Crie uma aplicação que solicite ao usuário o dia e o mês de seu aniversário.
+Escreva um programa que simule um caixa eletrônico que receba um valor de saque inteiro e múltiplo de 10 e mostre quantas notas de 100, 50, 20 e 10 ele paga. 
 
-O programa deve informar para o usuário quantos dias faltam para o seu aniversário ou quantos dias já se passaram.
+#### Não considere a quantidade de notas disponíveis no cofre do caixa-eletrônico.
 
-_O Arquivo script.js já contém as variáveis que pegam o dia e o mês atual, em tempo de execução._
+#### Valide todas as entradas de dados.

@@ -1,4 +1,41 @@
-html, body {
-  height: 100%;
-  width: 100%;
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    margin-left: 50px;
+    margin-top: 20px;
+}
+
+div{
+
+    padding: 10px;
+    width: 300px;
+}
+span{
+    padding: 5px;
+    text-align: justify;
+}
+
+label{
+    padding: 5px;
+    margin-top: 8px;
+}
+
+input{
+    margin-top: 5px;
+}
+p{
+    width: 300px;
+}
+img{
+    margin: 5px;
+}
+
+#borda{
+  border: 3px solid black;
+}
+
+
+#reload{
+    margin-left: 70px;
 }
